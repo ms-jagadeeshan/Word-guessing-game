@@ -10,7 +10,7 @@ int main()
                    "able","have","sing","star","city","soul","rich","duck","film","lion",
                    "live","safe","pain","rain","iron","once","with","fire","care","cake","back",
                     "lady","away","work","self","mole","golf"};
-    printf("INSTRUCTIONS");
+    printf("\t\tINSTRUCTIONS\n");
     string assigned="love";
     string playerinput;
     int goat=0,cow=0;
@@ -35,7 +35,7 @@ int main()
     }
 }
 
-int issame(string s1,string s2)      
+int issame(string s1,string s2)     
 {   
     int rvalue=1;
     for(int i=0;i<4;i++)
