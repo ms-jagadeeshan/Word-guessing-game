@@ -11,7 +11,10 @@ int main()
                    "live","safe","pain","rain","iron","once","with","fire","care","cake","back",
                     "lady","away","work","self","mole","golf"};
     printf("\t\tINSTRUCTIONS\n");
-
+     srand((unsigned) time(0));
+     int randomNumber = rand();
+     int nthelement=(int)randomNumber%37;
+    string assigned=words[nthelement];
       string playerinput;
     int goat=0,cow=0;
     int flag1=0;
