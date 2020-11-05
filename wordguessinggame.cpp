@@ -11,8 +11,8 @@ int main()
                    "live","safe","pain","rain","iron","once","with","fire","care","cake","back",
                     "lady","away","work","self","mole","golf"};
     printf("\t\tINSTRUCTIONS\n");
-    string assigned="love";
-    string playerinput;
+
+      string playerinput;
     int goat=0,cow=0;
     int flag1=0;
     while(flag1==0)
@@ -71,7 +71,7 @@ void analyse(string s1,string s2,int &goat,int &cow)
             if(s1[i]==s2[j])
             {
                 cow++;
-            }
+f            }
         }
     }
 
