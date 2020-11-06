@@ -6,6 +6,7 @@ void analyse(string,string,int &,int &);   //function to give cow and goat value
 
 int main()
 {
+    top:
     string words[]={"life","love","near","ring","wolf","fish","five","king","over","time",
                    "able","have","sing","star","city","soul","rich","duck","film","lion",
                    "live","safe","pain","rain","iron","once","with","fire","care","cake","back",
@@ -19,18 +20,33 @@ int main()
     cout<<"\t    eg.if your word is love\n";
     cout<<"\t       if answer is wolf \n";
     cout<< "\t       goat=1  cow=1\n";
-      
+    cout<<"4.if you wannt to quit game press q\n";
+    cout<<"5.Press n for enter into new game\n";
+    cout<<"6.Press Enter key to enter into the game\n";
+    cin.get();
+    cout<<"\t\t    WELCOME!\n"<<"\t         Enter the word\n";
     srand((unsigned) time(0));
      int randomNumber = rand();
      int nthelement=(int)randomNumber%37;
-
+    int i=0;
     string assigned=words[nthelement];
     string playerinput;
     int goat=0,cow=0;
     int flag1=0;
     while(flag1==0)
-    {
+    {       
+        i++;  
+        cout<<i<<'.';
         cin>>playerinput;
+        if(playerinput[0]=='q')
+        {
+            break; 
+        }
+        if(playerinput[0]=='n')
+        { 
+            cout << "\033[2J\033[1;1H";
+            goto top;
+        }
         int flag2;
         flag2=issame(assigned,playerinput);
         if(flag2==1)
