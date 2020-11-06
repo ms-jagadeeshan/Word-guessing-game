@@ -1,8 +1,8 @@
 #include<iostream>
 #include<cstring>
 using namespace std;
-int issame(string ,string );
-void analyse(string,string,int &,int &);
+int issame(string ,string );      //fucncton to check both words are same
+void analyse(string,string,int &,int &);   //function to give cow and goat values
 
 int main()
 {
@@ -19,8 +19,9 @@ int main()
     srand((unsigned) time(0));
      int randomNumber = rand();
      int nthelement=(int)randomNumber%37;
+
     string assigned=words[nthelement];
-      string playerinput;
+    string playerinput;
     int goat=0,cow=0;
     int flag1=0;
     while(flag1==0)
@@ -55,7 +56,9 @@ int issame(string s1,string s2)
        }
     }
     return rvalue;
+
     //if both strings are not same returns f and incase of same returns 1
+
 }
 
 void analyse(string s1,string s2,int &goat,int &cow)
@@ -79,10 +82,11 @@ void analyse(string s1,string s2,int &goat,int &cow)
             if(s1[i]==s2[j])
             {
                 cow++;
+
           }
+
         }
     }
-
 }
 
 
