@@ -40,7 +40,7 @@ int main()
         else
         {
             analyse(assigned,playerinput,goat,cow);
-            printf("cow=%d,goat=%d\n\n",cow,goat);
+            printf("goat=%d,cow=%d\n\n",goat,cow);
             cow=0;
             goat=0;
         }
