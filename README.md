@@ -1,3 +1,2 @@
-#project2
-hi
-superproject
+#project 
+This a word guessing game 
