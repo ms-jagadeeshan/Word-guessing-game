@@ -93,7 +93,9 @@ int main()
         int flag2;
         flag2=issame(assigned,playerinput);
         if(flag2==1)
-        {
+        {  
+            cout<<"\tCONGRADULATIONS! YOU WON !!!!!\n";
+
             break;
         }
         else
@@ -120,7 +122,7 @@ int issame(string s1,string s2)
        }
     }
     return rvalue;
- cout<<"congradulations you  won the game";
+  
     //if both strings are not same returns f and incase of same returns 1
 
 }
