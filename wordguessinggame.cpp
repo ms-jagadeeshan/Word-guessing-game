@@ -29,7 +29,7 @@ int main()
     "lane","last","late","lead","left","life","lift","like","line","link","list",
     "live","load","loan","lock","long","lord","lose","lost","love",
     "luck","made","mail","main","make","male","many","mark","meal","mean",
-    "meat","menu","mere","mike","mile","milk","mind","mine","miss","mode",
+    "meat","menu","mike","mile","milk","mind","mine","miss","mode",
     "mood","moon","more","most","move","much","must","name","navy","near","neck","need",
     "news","next","nice","nick","nine","none","nose","note","okay","once","only","onto",
     "open","oral","over","pace","pack","page","paid","pain","pair","palm","park","part",
