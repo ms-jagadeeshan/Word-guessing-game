@@ -31,7 +31,7 @@ int main()
     "luck","made","mail","main","make","male","many","Mark","mass","matt","meal","mean",
     "meat","meet","menu","mere","mike","mile","milk","mill","mind","mine","mode",
     "more","most","move","much","must","name","navy","near","neck",
-    "news","next","nice","nick","nose","note","okay","once","only","onto",
+    "news","next","nice","nick","nose","note","okay","once","only",
     "open","oral","over","pace","pack","page","paid","pain","pair","palm","park","part",
     "past","path","peak","pick","pink","pipe","plan","play","plot","plug","plus",
     "rate","read","real","rely","rent","rest","rice","rich","ride","ring",
@@ -41,10 +41,10 @@ int main()
     "sick","side","sign","site","size","skin","slip","slow","snow","soft","soil","sold",
     "sole","some","song","sort","soul","spot","star","stay","step","stop","such",
     "suit","sure","take","tale","talk","tank","tape","task","team","tech",
-    "tend","term","test","text","than","that","them","then","they","thin","this","thus"
+    "tend","term","test","text","than","them","then","they","thin","this","thus"
     ,"time","tiny","told","tone","tony","tour","town",
     "trip","true","tune","turn","twin","type","unit","upon","used","user","vary","vast",
-    "very","vice","view","vote","wage","wait","wake","walk","wall","want","ward","warm",
+    "very","vice","view","vote","wage","wait","wake","walk","want","ward","warm",
     "wash","wave","ways","weak","wear","went","west","what","when",
     "whom","wide","wife","wild","wind","wine","wing","wire","wise","wish","with",
     "word","wore","work","yard","yeah","year","your","zero","zone"};
