@@ -11,10 +11,14 @@ int main()
                    "live","safe","pain","rain","iron","once","with","fire","care","cake","back",
                     "lady","away","work","self","mole","golf"};
     printf("\t\tINSTRUCTIONS\n");
-    cout<<"1.You shoud give the four letters word\n"<<"2.All the four letters in the word should be distinct\n" ;
-    cout<<"3.terminologies involved\n"<<"     GOAT=n: n letter in your word is correct and lies in correct place\n" ;
-    cout<<"     COW=n:  n letters in your word are correct and lie in wrong plcce\n";
-    cout<<"\t    eg.if your word is love\n"<<"\t       if answer is wolf \n"<< "\t       goat=1  cow=1";
+    cout<<"1.You shoud give the four letters word\n";
+    cout<<"2.All the four letters in the word should be distinct\n";
+    cout<<"3.Terminologies involved\n";
+    cout<<"     if GOAT=n, then n letter in your word is correct and lies in correct place\n";
+    cout<<"     if COW=n, then n letters in your word are correct and lie in wrong place\n";
+    cout<<"\t    eg.if your word is love\n";
+    cout<<"\t       if answer is wolf \n";
+    cout<< "\t       goat=1  cow=1\n";
       
     srand((unsigned) time(0));
      int randomNumber = rand();
