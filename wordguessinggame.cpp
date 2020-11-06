@@ -1,8 +1,8 @@
 #include<iostream>
 #include<cstring>
 using namespace std;
-int issame(string ,string );
-void analyse(string,string,int &,int &);
+int issame(string ,string );      //fucncton to check both words are same
+void analyse(string,string,int &,int &);   //function to give cow and goat values
 
 int main()
 {
@@ -50,7 +50,9 @@ int issame(string s1,string s2)
        }
     }
     return rvalue;
+
     //if both strings are not same returns f and incase of same returns 1
+
 }
 
 void analyse(string s1,string s2,int &goat,int &cow)
