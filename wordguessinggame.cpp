@@ -1,5 +1,4 @@
 #include<iostream>
-#include<string.h>
 #include<cstring>
 using namespace std;
 int issame(string ,string );      //fucncton to check both words are same
@@ -70,7 +69,7 @@ int main()
      int nthelement=(int)randomNumber%500;
     int i=0;
     string assigned=words[nthelement];
-    string playerinput; 
+    string playerinput;
     int goat=0,cow=0;
     int flag1=0;
     while(flag1==0)
@@ -78,8 +77,6 @@ int main()
         i++;  
         cout<<i<<'.';
         cin>>playerinput;
-        if(playerinput.length()==1)
-        {
         if(playerinput[0]=='q')
         {
             break; 
@@ -88,7 +85,6 @@ int main()
         { 
             cout << "\033[2J\033[1;1H";
             goto top;
-        }
         }
         int flag2;
         flag2=issame(assigned,playerinput);
@@ -116,11 +112,10 @@ int issame(string s1,string s2)
        {
            rvalue=0;
            break;
-           
        }
     }
     return rvalue;
- cout<<"congradulations you  won the game";
+
     //if both strings are not same returns f and incase of same returns 1
 
 }
