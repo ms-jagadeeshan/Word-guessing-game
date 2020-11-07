@@ -1,11 +1,11 @@
-#include<iostream>
+   #include<iostream>
 #include<string.h>
 using namespace std;
  int main()
 {  int k,m;
-   char flag[1000];
+   char flag[5000];
    cout<<"Enter the paragraph:"<<endl;
-   cin.getline(flag,1000);
+   cin.getline(flag,5000);
    k=strlen(flag);
    cout<<"press 1 to change capital letters to small letters "<<endl;
    cout<<"press 2 to change  small letters to  capital letters "<<endl;

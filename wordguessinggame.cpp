@@ -3,7 +3,7 @@
 using namespace std;
 int issame(string ,string );      //fucncton to check both words are same
 void analyse(string,string,int &,int &);   //function to give cow and goat values
-
+void isvalid(string);
 int main()
 {
     top:
@@ -107,6 +107,7 @@ int main()
 
 int issame(string s1,string s2)     
 {   
+    //s1 is what we assigned and s2 is what user given
     int rvalue=1;
     for(int i=0;i<4;i++)
     {
@@ -123,6 +124,7 @@ int issame(string s1,string s2)
 
 void analyse(string s1,string s2,int &goat,int &cow)
 {
+    //s1 is what we assigned and s2 is what user given
     for(int i=0;i<4;i++)
     {
         if(s1[i]==s2[i])
@@ -149,7 +151,11 @@ void analyse(string s1,string s2,int &goat,int &cow)
     }
 }
 
-
-
-
-
+void isvalid(string s1)
+{
+       string validwords [][500]={
+           {"aahs","aals","abac","abas","abba","abbe","abbs","abed","abet","abid","able","ably","abos","abri","abut","abye","abys","acai","acca","aced","acer","aces","ache","achy","acid","acme","acne","acre","acta","acts","acyl","adaw","adds","addy","adit","ados","adry","adze","aeon","aero","aery","aesc","afar","affy","afro","agar","agas","aged","agee","agen","ager","ages","agha","agin","agio","aglu","agly","agma","agog","agon","ague","ahed","ahem","ahis","ahoy","aias","aide","aids","aiga","ails","aims","aine","ains","airn","airs","airt","airy","aits","aitu","ajar","ajee","aked","akee","akes","akin","alae","alan","alap","alar","alas","alay","alba","albe","albs","alco","alec","alee","alef","ales","alew","alfa","alfs","alga","alif","alit","alko","alky","alls","ally","alma","alme","alms","alod","aloe","alow","alps","also","alto","alts","alum","amah","amas","ambo","amen","amia","amid","amie","amin","amir","amis","amla","ammo","amok","amps","amus","amyl","anal","anan","anas","ance","ands","anes","anew","anga","anil","anis","ankh","anna","anno","anns","anoa","anon","anow","ansa","anta","ante","anti","ants","anus","apay","aped","aper","apes","apex","apod","apos","apps","apse","apso","apts","aqua","arak","arar","arba","arbs","arch","arco","arcs","ards","area","ared","areg","ares","aret","arew","arfs","aria","arid","aril","aris","arks","arle","arms","army","arna","arow","arpa","arse","arsy","arti","arts","arty","arum","arvo","aryl","asar","asci","asea","ashy","asks","asps","atap","ates","atma","atoc","atok","atom","atop","atua","aufs","auks","aula","auld","aune","aunt","aura","auto","aval","avas","avel","aver","aves","avid","avos","avow","away","awdl","awed","awee","awes","awls","awns","awny","awol","awry","axal","axed","axel","axes","axil","axis","axle","axon","ayah","ayes","ayin","ayre","ayus","azan","azon","azym"},
+           {"baal","baas","baba","babe","babu","baby","bach","back","bacs","bade","bads","bael","baff","baft","bagh","bags","baht","bail","bait","baju","bake","bald","bale","balk","ball","balm","bals","balu","bams","banc","band","bane","bang","bani","bank","bans","bant","baps","bapu","barb","bard","bare","barf","bark","barm","barn","barp","bars","base","bash","bask","bass","bast","bate","bath","bats","batt","baud","bauk","baur","bawd","bawl","bawn","bawr","baye","bays","bayt","bead","beak","beam","bean","bear","beat","beau","beck","bede","beds","bedu","beef","been","beep","beer","bees","beet","bego","begs","bein","bell","bels","belt","bema","bend","bene","beni","benj","bens","bent","bere","berg","berk","berm","best","beta","bete","beth","bets","bevy","beys","bhat","bhel","bhut","bias","bibb","bibs","bice","bide","bidi","bids","bien","bier","biff","biga","bigg","bigs","bike","bile","bilk","bill","bima","bind","bine","bing","bink","bins","bint","biog","bios","bird","birk","birl","biro","birr","bise","bish","bisk","bist","bite","bito","bits","bitt","bize","blab","blad","blae","blag","blah","blam","blat","blaw","blay","bleb","bled","blee","blet","blew","bley","blin","blip","blob","bloc","blog","blot","blow","blub","blue","blur","boab","boak","boar","boas","boat","boba","bobs","bock","bode","bods","body","boep","boet","boff","bogs","bogy","boho","bohs","boil","bois","boke","boko","boks","bola","bold","bole","boll","bolo","bolt","boma","bomb","bona","bond","bone","bong","bonk","bony","boob","booh","book","bool","boom","boon","boor","boos","boot","bops","bora","bord","bore","bork","borm","born","bors","bort","bosh","bosk","boss","bota","both","bots","bott","bouk","boun","bout","bowl","bowr","bows","boxy","boyf","boyg","boyo","boys","bozo","brad","brae","brag","brak","bran","bras","brat","braw","bray","bred","bree","brei","bren","brer","brew","brey","brie","brig","brik","brim","brin","brio","bris","brit","brod","brog","broo","bros","brow","brrr","brus","brut","brux","buat","buba","bubo","bubs","bubu","buck","buda","budi","budo","buds","buff","bufo","bugs","buhl","buhr","buik","buke","bulb","bulk","bull","bumf","bump","bums","buna","bund","bung","bunk","bunn","buns","bunt","buoy","bura","burb","burd","burg","burk","burl","burn","burp","burr","burs","bury","bush","busk","buss","bust","busy","bute","buts","butt","buys","buzz","byde","byes","byke","byre","byrl","byte"}
+           
+       };
+}
