@@ -57,17 +57,16 @@ int main()
 
 
     printf("\t\tINSTRUCTIONS\n");
-    cout<<"1.You shoud give the four letters word\n";
-    cout<<"2.All the four letters in the word should be distinct\n";
+    cout<<"1.You shoud give the four letters word and word should be meaningful.\n";
+    cout<<"2.All the four letters in the word should be distinct.\n";
     cout<<"3.Terminologies involved\n";
-    cout<<"     =>if GOAT=n, then n letter in your word is correct and lies in correct place\n";
-    cout<<"     =>if COW=n, then n letters in your word are correct and lie in wrong place\n";
-    cout<<"\t    eg.if your word is love\n";
-    cout<<"\t       if answer is wolf \n";
+    cout<<"     =>if GOAT=n, then n letter in your word is correct and lies in correct place.\n";
+    cout<<"     =>if COW=n, then n letters in your word are correct and lie in wrong place.\n";
+    cout<<"\t    eg.if your word is love and answer is wolf \n";
     cout<< "\t       goat=1  cow=1\n";
-    cout<<"4.Press 'q' to quit the game\n";
-    cout<<"5.Press 'n' for enter into new game\n";
-    cout<<"6.Press Enter key to enter into the game\n";
+    cout<<"4.Press 'q' to quit the game.\n";
+    cout<<"5.Press 'n' for enter into new game.\n";
+    cout<<"6.Press Enter key to enter into the game.\n";
     cin.get();
     cout<<"\t\t    WELCOME!\n"<<"\t         Enter the word\n";
     srand((unsigned) time(0));
