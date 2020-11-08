@@ -75,7 +75,7 @@ int main()
     int i=1;
     string assigned=words[nthelement];
     string playerinput;
-    cout<<assigned;
+    //cout<<assigned;
     int goat=0,cow=0;
     int flag1=0;
     while(flag1==0)
