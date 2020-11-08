@@ -1,6 +1,6 @@
-  //return value =>101, User entered valid word and no information about letter repetition
+  //return value =>101, User entered valid word and have no repetition
   //return value =>102, User entered non-vaid word 
-
+  //return value =>103, User entered value is valid but have letter repetition
 
 
 
@@ -10,12 +10,13 @@ using namespace std;
 int issame(string ,string );      //fucncton to check both words are same
 void analyse(string,string,int &,int &);   //function to give cow and goat values
 int isvalid(string);
+int isrepeat(string);
 int main()
 {
     top:
     string words[]={"able","acid","aged","also","area","army","away","back",
-    "band","bank","base","bath","bear","beat","belt","best",
-    "bird","blow","blue","boat","body","bond","bone","born",
+    "band","bank","base","bath","bear","beat","belt","best","bird","blow",
+    "blue","boat","body","bond","bone","born",
     "both","bowl","bulk","burn","bush","busy","calm","came","camp","card","care",
     "case","cash","cast","chat","chip","city","club","coal","coat","code","cold",
     "come","cope","copy","core","cost","crew","crop","dark","date",
@@ -114,12 +115,38 @@ int main()
                 }
             }break;
             case 102 :{
-                printf("Error %d : %c%c%c%c is not a Meaningful word.... Try again.....\n",rv,playerinput[0],playerinput[1],playerinput[2],playerinput[3]);
+                printf("Error %d : \"%c%c%c%c\" is not a Meaningful word.... Try again.....\n",rv,playerinput[0],playerinput[1],playerinput[2],playerinput[3]);
+                goto whiletop;
+            }break;
+            case 103 :{
+                printf("Error %d : \"%c%c%c%c\" have repetition of letters....   Try again......\n",rv,playerinput[0],playerinput[1],playerinput[2],playerinput[3]);
                 goto whiletop;
             }break;
 
         }
     }
+}
+int isrepeat(string s1)
+{
+    for(int i=0;i<4;i++)
+    {
+        for(int j=0;j<4;j++)
+        {
+            if(i==j)
+            {
+                continue;
+            }
+            if(s1[i]==s1[j])
+            {
+                return 103;
+                break;
+
+          }
+
+        }
+        
+    }
+    return 101;
 }
 
 int issame(string s1,string s2)     
@@ -209,6 +236,11 @@ int isvalid(string s1)
             break;
         }
     }
+    if(rvalue==101)
+    {
+        rvalue=isrepeat(s1);
+    }
+
     if(rvalue==0)
     {
         rvalue=102;
