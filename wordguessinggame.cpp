@@ -10,7 +10,7 @@ using namespace std;
 int issame(string ,string );      //fucncton to check both words are same
 void analyse(string,string,int &,int &);   //function to give cow and goat values
 int isvalid(string);
-int isrepeat(string);
+int isrepeat(string);          
 int main()
 {
     top:
@@ -59,7 +59,7 @@ int main()
     cout<<"\t\t    WELCOME!\n"<<"\t         Enter the word\n";
     srand((unsigned) time(0));
      int randomNumber = rand();
-     int nthelement=(int)randomNumber%500;
+     int nthelement=(int)randomNumber%413;
     int i=1;
     string assigned=words[nthelement];
     string playerinput;
@@ -103,22 +103,22 @@ int main()
             }break;
 
             case 102 :{
-                printf("Error %d : \"%c%c%c%c\" is not a Meaningful word.... Try again.....\n",rv,playerinput[0],playerinput[1],playerinput[2],playerinput[3]);
+                printf("Error %d : \"%c%c%c%c\" is not a Meaningful word.... Try again.....\n\n",rv,playerinput[0],playerinput[1],playerinput[2],playerinput[3]);
                 goto whiletop;
             }break;
 
             case 103 :{
-                printf("Error %d : \"%c%c%c%c\" have repetition of letters....   Try again......\n",rv,playerinput[0],playerinput[1],playerinput[2],playerinput[3]);
+                printf("Error %d : \"%c%c%c%c\" have repetition of letters....   Try again......\n\n",rv,playerinput[0],playerinput[1],playerinput[2],playerinput[3]);
                 goto whiletop;
             }break;
             
             case 104 :{
-                printf("Error %d : Entered word has less than four letters...  Try again....\n",rv);
+                printf("Error %d : Entered word has less than four letters...  Try again....\n\n",rv);
                 goto whiletop;
             }break;
 
             case 105 :{
-                printf("Error %d : Entered word has more than four letters.... Try again.....\n",rv);
+                printf("Error %d : Entered word has more than four letters.... Try again.....\n\n",rv);
                 goto whiletop;
             }break;
 
@@ -159,7 +159,7 @@ int issame(string s1,string s2)
         }
     }
     return rvalue;
-    //if both strings are not same returns f and incase of same returns 1
+    //if both strings are not same returns 0 and incase of same returns 1
 }
 
 void analyse(string s1,string s2,int &goat,int &cow)
