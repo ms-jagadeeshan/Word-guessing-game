@@ -1,8 +1,8 @@
   //return value =>101, User entered valid word and have no repetition
   //return value =>102, User entered non-vaid word 
   //return value =>103, User entered value is valid but have letter repetition
-
-
+  //return value =>104, User entered less than four letters 
+  //return value =>105, User entered more than four letters
 
 #include<iostream>
 #include<cstring>
@@ -10,7 +10,7 @@ using namespace std;
 int issame(string ,string );      //fucncton to check both words are same
 void analyse(string,string,int &,int &);   //function to give cow and goat values
 int isvalid(string);
-int isrepeat(string);
+int isrepeat(string);          
 int main()
 {
     top:
@@ -59,7 +59,7 @@ int main()
     cout<<"\t\t    WELCOME!\n"<<"\t         Enter the word\n";
     srand((unsigned) time(0));
      int randomNumber = rand();
-     int nthelement=(int)randomNumber%500;
+     int nthelement=(int)randomNumber%413;
     int i=1;
     string assigned=words[nthelement];
     string playerinput;
@@ -69,7 +69,7 @@ int main()
     while(flag1==0)
     {       
         whiletop:
-        cout<<i<<'.';
+        cout<<i<<')';
         cin>>playerinput;
         if(playerinput[0]=='q'&&playerinput.length()==1)
         {
@@ -101,12 +101,24 @@ int main()
                     goat=0;
                 }
             }break;
+
             case 102 :{
-                printf("Error %d : \"%c%c%c%c\" is not a Meaningful word.... Try again.....\n",rv,playerinput[0],playerinput[1],playerinput[2],playerinput[3]);
+                printf("Error %d : \"%c%c%c%c\" is not a Meaningful word.... Try again.....\n\n",rv,playerinput[0],playerinput[1],playerinput[2],playerinput[3]);
                 goto whiletop;
             }break;
+
             case 103 :{
-                printf("Error %d : \"%c%c%c%c\" have repetition of letters....   Try again......\n",rv,playerinput[0],playerinput[1],playerinput[2],playerinput[3]);
+                printf("Error %d : \"%c%c%c%c\" have repetition of letters....   Try again......\n\n",rv,playerinput[0],playerinput[1],playerinput[2],playerinput[3]);
+                goto whiletop;
+            }break;
+            
+            case 104 :{
+                printf("Error %d : Entered word has less than four letters...  Try again....\n\n",rv);
+                goto whiletop;
+            }break;
+
+            case 105 :{
+                printf("Error %d : Entered word has more than four letters.... Try again.....\n\n",rv);
                 goto whiletop;
             }break;
 
@@ -115,23 +127,21 @@ int main()
 }
 int isrepeat(string s1)
 {
-    for(int i=0;i<4;i++)
+    for ( int i=0 ; i<4 ; i++ )
     {
-        for(int j=0;j<4;j++)
+        for ( int j=0 ; j<4 ; j++ )
         {
-            if(i==j)
+            if ( i==j )
             {
                 continue;
             }
-            if(s1[i]==s1[j])
+
+            if ( s1[i]==s1[j] )
             {
                 return 103;
                 break;
-
-          }
-
-        }
-        
+            }
+        }       
     }
     return 101;
 }
@@ -140,16 +150,16 @@ int issame(string s1,string s2)
 {   
     //s1 is what we assigned and s2 is what user given
     int rvalue=1;
-    for(int i=0;i<4;i++)
+    for ( int i=0;i<4;i++ )
     {
-       if(s1[i]!=s2[i])
-       {   
+        if ( s1[i]!=s2[i] )
+        {   
            rvalue=0;
            break;
-       }
+        }
     }
     return rvalue;
-    //if both strings are not same returns f and incase of same returns 1
+    //if both strings are not same returns 0 and incase of same returns 1
 }
 
 void analyse(string s1,string s2,int &goat,int &cow)
@@ -157,7 +167,7 @@ void analyse(string s1,string s2,int &goat,int &cow)
     //s1 is what we assigned and s2 is what user given
     for(int i=0;i<4;i++)
     {
-        if(s1[i]==s2[i])
+        if ( s1[i]==s2[i] )
         {
             goat++;
         }
@@ -211,26 +221,37 @@ int isvalid(string s1)
         {"yaar","yaba","yack","yads","yaff","yagi","yags","yahs","yaks","yald","yale","yams","yang","yank","yapp","yaps","yard","yare","yark","yarn","yarr","yate","yaud","yaup","yawl","yawn","yawp","yaws","yawy","yays","ybet","yead","yeah","yean","year","yeas","yebo","yech","yede","yeed","yegg","yeld","yelk","yell","yelm","yelp","yelt","yens","yeps","yerd","yerk","yesk","yest","yeti","yett","yeuk","yeve","yews","ygoe","yids","yike","yill","yins","yipe","yips","yird","yirk","yirr","yite","ylem","ylke","ympe","ympt","yobs","yock","yode","yodh","yods","yoga","yogh","yogi","yoke","yoks","yold","yolk","yomp","yond","yoni","yont","yoof","yoop","yore","york","yorp","youk","your","yous","yowe","yowl","yows","yuan","yuca","yuch","yuck","yuft","yuga","yugs","yuke","yuko","yuks","yuky","yule","yump","yunx","yups","yurt","yutz","yuzu","ywis"},
         {"zack","zags","zany","zaps","zarf","zati","zeal","zeas","zebu","zeds","zees","zein","zeks","zels","zeps","zerk","zero","zest","zeta","zeze","zhos","ziff","zigs","zila","zill","zimb","zinc","zine","zing","zins","zips","zite","ziti","zits","zizz","zobo","zobu","zoea","zoic","zols","zona","zone","zonk","zoom","zoon","zoos","zoot","zori","zouk","zulu","zupa","zurf","zyga","zyme","zzzs"},
     };
-    int nth_alpha;
     int rvalue=0;
-    nth_alpha=(int)s1[0]-97;
-    for(int i=0;i<500;i++)
-    {  
-        rvalue=issame(s1,validwords[nth_alpha][i]);
-        if(rvalue==1)
-        {
-            rvalue=101;
-            break;
+    int usrwrdlen;
+    usrwrdlen=s1.length();
+    if(usrwrdlen==4)
+    {
+        int nth_alpha;
+        nth_alpha=(int)s1[0]-97;
+        for(int i=0;i<500;i++)
+        {  
+            rvalue=issame(s1,validwords[nth_alpha][i]);
+            if ( rvalue==1 )
+            {
+                rvalue=101;
+                break;
+            }
         }
+        if ( rvalue==101 )
+        {
+            rvalue=isrepeat(s1);
+        }
+        if ( rvalue==0 )
+        {
+            rvalue=102;
+        }
+       
     }
-    if(rvalue==101)
-    {
-        rvalue=isrepeat(s1);
+    else if ( usrwrdlen<4 ) {
+        rvalue=104;
     }
-
-    if(rvalue==0)
-    {
-        rvalue=102;
+    else if ( usrwrdlen>4 ) {
+        rvalue=105;
     }
     return rvalue;
 }
